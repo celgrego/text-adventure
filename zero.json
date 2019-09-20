@@ -1,0 +1,97 @@
+{
+    "verbs": [],
+    "rooms": {
+      "START": {
+        "name": "maze",
+        "desc": "You are running through the maze. You hear monsters in the distance.",
+        "exits": [
+          {
+            "verb": "STRAIGHT",
+            "target": "WALL"
+          },
+          {
+            "verb": "LEFT",
+            "target": "MONSTER"
+          },
+          {
+            "verb": "RIGHT",
+            "target": "CROSSROAD"
+    
+          }
+        ]
+      },
+      "you died": {
+        "name": "Monster",
+        "desc": "You are you've been devoured",
+        "exits": [
+        
+        ]
+      },
+
+      "CROSSROAD":{
+          "name" : "crossroad",
+          "desc" : "theres a sign that says go right",
+          "exits" : [
+         {"verb": "RIGHT",
+        "target" : "MONSTER"},
+        {
+            "verb": "LEFT",
+            "target": "Winner"
+        }
+          ]
+
+      },
+
+      "Winner": {
+           "name": "Winner",
+           "desc":"you've made it out of the maze!!!",
+           "exits":[
+
+           ]
+      },
+        
+
+      "WALL": {
+        "name": "Wall",
+        "desc": "You have hit a dead end. The wall is impassable.",
+        "exits": [
+          {
+            "verb": "LEFT",
+            "target": "FRIEND"
+          },
+          {
+            "verb": "RIGHT",
+            "target": "CROSSROAD"
+          }
+        ]
+      },
+      "MONSTER": {
+        "name": "Monster",
+        "desc": "You have encountered a scary monster.",
+        "exits": [
+          {
+            "verb": "LEFT",
+            "target": "FRIEND"
+          },
+          {
+            "verb": "RIGHT",
+            "target": "you died"
+          }
+        ]
+      },
+      "FRIEND": {
+        "name": "Friend",
+        "desc": "You have encountered a friend.",
+        "exits": [
+          {
+            "verb": "LEFT",
+            "target": "FRIEND"
+          },
+          {
+            "verb": "RIGHT",
+            "target": "MONSTER"
+          }
+        ]
+      }
+    }
+  }
